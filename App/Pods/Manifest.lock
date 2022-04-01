@@ -1,4 +1,5 @@
 PODS:
+  - Kingfisher (7.2.0)
   - MicrosoftFluentUI (0.4.7):
     - MicrosoftFluentUI/ActivityIndicator_ios (= 0.4.7)
     - MicrosoftFluentUI/Appearance_mac (= 0.4.7)
@@ -160,15 +161,18 @@ PODS:
   - MicrosoftFluentUI/Utilities_ios (0.4.7)
 
 DEPENDENCIES:
+  - Kingfisher (~> 7.0)
   - MicrosoftFluentUI
 
 SPEC REPOS:
   trunk:
+    - Kingfisher
     - MicrosoftFluentUI
 
 SPEC CHECKSUMS:
+  Kingfisher: 3ac0b75b155cabc0e544877d1a4deea29feece92
   MicrosoftFluentUI: 920fe95ba93ac4f64eac144767b6b7dfdfc0f1ed
 
-PODFILE CHECKSUM: 2442c467fb6cc0b1c0cc1e053b78305edede4aca
+PODFILE CHECKSUM: cd8d24366e3af91038bde11bb3ab41c384fd0a0b
 
 COCOAPODS: 1.11.2

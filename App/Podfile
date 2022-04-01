@@ -9,5 +9,8 @@ target 'SuperChatApp' do
   
   # Install Fluent UI
   pod 'MicrosoftFluentUI'
+  
+  # Install King fisher to load image from url
+  pod 'Kingfisher', '~> 7.0'
 
 end

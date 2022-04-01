@@ -140,7 +140,7 @@
 		FFA13F6427EE317C00C22147 = {
 			isa = PBXGroup;
 			children = (
-				FFA13F6F27EE317C00C22147 /* App */,
+				FFA13F6F27EE317C00C22147 /* MainApp */,
 				FFA13F6E27EE317C00C22147 /* Products */,
 				22E086E2AC5F271CA2CB6A4F /* Pods */,
 				4A524E24B1E6844FB204ED65 /* Frameworks */,
@@ -155,7 +155,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FFA13F6F27EE317C00C22147 /* App */ = {
+		FFA13F6F27EE317C00C22147 /* MainApp */ = {
 			isa = PBXGroup;
 			children = (
 				FFACC07827F73CC200184F76 /* Reusables */,
@@ -166,7 +166,7 @@
 				FFA13F7B27EE317E00C22147 /* LaunchScreen.storyboard */,
 				FFA13F7E27EE317E00C22147 /* Info.plist */,
 			);
-			path = App;
+			path = MainApp;
 			sourceTree = "<group>";
 		};
 		FFA13F8427EE318800C22147 /* Root */ = {
@@ -517,7 +517,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BLGCGGKJB5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = App/Info.plist;
+				INFOPLIST_FILE = MainApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SCA;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -547,7 +547,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BLGCGGKJB5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = App/Info.plist;
+				INFOPLIST_FILE = MainApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SCA;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

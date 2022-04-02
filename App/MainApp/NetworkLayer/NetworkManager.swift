@@ -6,14 +6,52 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 class NetworkManager {
     
-    static func requestLogin(
+    func requestlogout(
         completion: @escaping (Result<String, Error>) -> ()
     ) {
-        completion(.success("success"))
+        if UserDetail.deteleAll() {
+            completion(.success("success"))
+        } else {
+            //completion(.)
+        }
     }
+    
+    func requestLogin(
+        target:NetworkAPI.loginType,
+        completion: @escaping (Result<String, Error>) -> ()
+    ) {
+        switch target {
+            
+        case .email(let email,let password):
+            self.loginByEmail(
+                email: email, password: password,
+                completion: completion)
+        }
+    }
+    
+    private func loginByEmail(
+        email:String,
+        password:String,
+        completion: @escaping (Result<String, Error>) -> ()
+    ) {
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            if error != nil {
+                completion(.failure(error!))
+            } else {
+                //TODO: Add something to the closure
+                NetworkConstant.user = authResult?.user
+                UserDetail.email = email
+                UserDetail.password = password
+                completion(.success("success"))
+            }
+            
+        }
+    }
+    
     
     func request<T: Decodable>(
         target: NetworkAPI,

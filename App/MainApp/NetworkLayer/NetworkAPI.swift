@@ -16,6 +16,12 @@ enum NetworkAPI {
         case auth
     }
     
+    enum loginType {
+        case email(email:String,password:String)
+    }
+    
     case post(postPath:postRequest)
     case get(getPath:getRequest)
+    case login(type:loginType)
+    
 }

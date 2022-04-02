@@ -7,13 +7,25 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
-
-    @IBOutlet weak var errorLabel: UILabel!
+class LoginViewController: BaseViewController {
+    
+    @IBOutlet weak var emailTextField:UITextField!
+    @IBOutlet weak var passwordTextField:UITextField!
+    
+    var viewModel:LoginViewModel!
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        LoginViewModel.configure(viewController: self)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        LoginViewModel.configure(viewController: self)
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        errorLabel.isHidden = true
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,16 +34,19 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func didTapLogin(_ sender: Any) {
-        NetworkManager.requestLogin { [weak self] hasil in
-            guard let self = self else {return}
-            switch hasil {
-            case .success(_):
-                let vc = HomeViewController(nibName: "HomeViewController", bundle: nil)
-                self.navigationController?.pushViewController(vc, animated: true)
-            case .failure(_):
-                self.errorLabel.isHidden = false
-            }
-        }
+        viewModel.tryToLoginWithEmail(email: emailTextField.text, password: passwordTextField.text)
     }
     
+}
+
+extension LoginViewController:LoginVMOutput {
+    func didSuccessAuth() {
+        let vc = HomeViewController(nibName: "HomeViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func didFailAuth(error:Error) {
+        self.showNotification(message: error.localizedDescription)
+        hideNotification(isInstant: false)
+    }
 }

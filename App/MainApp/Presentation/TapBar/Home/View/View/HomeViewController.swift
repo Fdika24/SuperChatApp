@@ -32,7 +32,10 @@ class HomeViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.isNavigationBarHidden = false
+        self.navigationItem.hidesBackButton = true
+        self.title = "Home"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutDidTapped))
     }
 
     override func viewDidLoad() {
@@ -41,16 +44,27 @@ class HomeViewController: BaseViewController {
     }
     
     private func setupTableView() {
-        
         /// assigning up tableview delegate and data source
         self.tableView.delegate = self
         self.tableView.dataSource = self
         /// register tableview cell
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
     }
+    
+    @objc func logoutDidTapped() {
+        viewModel.tryToLogout()
+    }
 }
 
 extension HomeViewController:HomeVMOutput {
+    func didSuccessLogout() {
+        self.navigateToAuthView()
+    }
+    
+    func didFailLogout() {
+        self.showNotification(message: "Log-out fails")
+    }
+    
     func setupViews() {
         self.setupTableView()
     }

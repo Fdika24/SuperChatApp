@@ -53,4 +53,15 @@ class BaseViewController:UIViewController {
         self.navigationController?.isNavigationBarHidden = false
     }
     
+    func navigateToAuthView() {
+        for vc in navigationController!.viewControllers {
+            if vc is LoginViewController {
+                self.navigationController?.popToViewController(vc, animated: true)
+                return
+            }
+        }
+        
+        let vc = LoginViewController(nibName: "LoginViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }

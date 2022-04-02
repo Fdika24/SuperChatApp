@@ -13,10 +13,12 @@ class NetworkManager {
     func requestlogout(
         completion: @escaping (Result<String, Error>) -> ()
     ) {
-        if UserDetail.deteleAll() {
+        do {
+            try Auth.auth().signOut()
+            UserDetail.deteleAll()
             completion(.success("success"))
-        } else {
-            //completion(.)
+        } catch (let error) {
+            completion(.failure(error))
         }
     }
     

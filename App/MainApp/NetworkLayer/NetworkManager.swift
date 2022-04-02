@@ -15,7 +15,6 @@ class NetworkManager {
     ) {
         do {
             try Auth.auth().signOut()
-            UserDetail.deteleAll()
             completion(.success("success"))
         } catch (let error) {
             completion(.failure(error))
@@ -27,7 +26,6 @@ class NetworkManager {
         completion: @escaping (Result<String, Error>) -> ()
     ) {
         switch target {
-            
         case .email(let email,let password):
             self.loginByEmail(
                 email: email, password: password,
@@ -45,9 +43,6 @@ class NetworkManager {
                 completion(.failure(error!))
             } else {
                 //TODO: Add something to the closure
-                NetworkConstant.user = authResult?.user
-                UserDetail.email = email
-                UserDetail.password = password
                 completion(.success("success"))
             }
             

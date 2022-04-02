@@ -54,14 +54,7 @@ class BaseViewController:UIViewController {
     }
     
     func navigateToAuthView() {
-        for vc in navigationController!.viewControllers {
-            if vc is LoginViewController {
-                self.navigationController?.popToViewController(vc, animated: true)
-                return
-            }
-        }
-        
         let vc = LoginViewController(nibName: "LoginViewController", bundle: nil)
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.navigationController?.setViewControllers([vc], animated: true)
     }
 }

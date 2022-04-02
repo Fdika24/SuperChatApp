@@ -42,7 +42,7 @@ class LoginViewController: BaseViewController {
 extension LoginViewController:LoginVMOutput {
     func didSuccessAuth() {
         let vc = HomeViewController(nibName: "HomeViewController", bundle: nil)
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.navigationController?.setViewControllers([vc], animated: true)
     }
     
     func didFailAuth(error:Error) {

@@ -14,8 +14,8 @@
             filePath = "MainApp/NetworkLayer/NetworkManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "loginByEmail(email:password:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "MainApp/NetworkLayer/NetworkManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "loginByEmail(email:password:completion:)"
             landmarkType = "7">
          </BreakpointContent>

@@ -39,7 +39,6 @@ class RootCoordinator {
     }
     
     private func navigateToAuth() {
-        /// change if needed, this will be your initial view controller
         let vc = LoginViewController(nibName: "LoginViewController", bundle: nil)
         navigationController.pushViewController(vc, animated: true)
     }

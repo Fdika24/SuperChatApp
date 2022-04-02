@@ -8,14 +8,12 @@
 import FirebaseAuth
 
 class NetworkConstant {
-    
-    static internal var user:User? {
+    static private var user:User? {
         get {
             Auth.auth().currentUser
         }
     }
     // check if user is auth
-    //TODO: Change string to User data type
     static public func getUser() -> User? {
         return self.user
     }

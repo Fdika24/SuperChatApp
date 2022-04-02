@@ -13,6 +13,9 @@
 		FF0D96A927F735050082E9A2 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF0D96A727F735050082E9A2 /* LoginViewController.xib */; };
 		FF0D96AD27F736890082E9A2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0D96AB27F736890082E9A2 /* HomeViewController.swift */; };
 		FF0D96AE27F736890082E9A2 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF0D96AC27F736890082E9A2 /* HomeViewController.xib */; };
+		FF8E1C8D27F823C6005497E6 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8E1C8B27F823C6005497E6 /* HomeTableViewCell.swift */; };
+		FF8E1C8E27F823C6005497E6 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8E1C8C27F823C6005497E6 /* HomeTableViewCell.xib */; };
+		FF8E1C9127F8260E005497E6 /* UIImageViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8E1C9027F8260E005497E6 /* UIImageViewExt.swift */; };
 		FFA13F7127EE317C00C22147 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA13F7027EE317C00C22147 /* AppDelegate.swift */; };
 		FFA13F7327EE317C00C22147 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA13F7227EE317C00C22147 /* SceneDelegate.swift */; };
 		FFA13F7A27EE317E00C22147 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFA13F7927EE317E00C22147 /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 		FF0D96A727F735050082E9A2 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		FF0D96AB27F736890082E9A2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FF0D96AC27F736890082E9A2 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		FF8E1C8B27F823C6005497E6 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		FF8E1C8C27F823C6005497E6 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		FF8E1C9027F8260E005497E6 /* UIImageViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExt.swift; sourceTree = "<group>"; };
 		FFA13F6D27EE317C00C22147 /* SuperChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA13F7027EE317C00C22147 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFA13F7227EE317C00C22147 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +143,23 @@
 			path = Chat;
 			sourceTree = "<group>";
 		};
+		FF8E1C8A27F823A0005497E6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FF8E1C8B27F823C6005497E6 /* HomeTableViewCell.swift */,
+				FF8E1C8C27F823C6005497E6 /* HomeTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FF8E1C8F27F825FE005497E6 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				FF8E1C9027F8260E005497E6 /* UIImageViewExt.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
 		FFA13F6427EE317C00C22147 = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +232,7 @@
 		FFACC07527F7399100184F76 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FF8E1C8A27F823A0005497E6 /* Cell */,
 				FF0D96AB27F736890082E9A2 /* HomeViewController.swift */,
 				FF0D96AC27F736890082E9A2 /* HomeViewController.xib */,
 				FFACC08127F74E1E00184F76 /* HomeVCDelegate.swift */,
@@ -221,6 +245,7 @@
 		FFACC07827F73CC200184F76 /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
+				FF8E1C8F27F825FE005497E6 /* UIImage */,
 				FFACC07927F73CC800184F76 /* BaseVC */,
 			);
 			path = Reusables;
@@ -307,6 +332,7 @@
 				FFA13F7A27EE317E00C22147 /* Assets.xcassets in Resources */,
 				FF0D96A927F735050082E9A2 /* LoginViewController.xib in Resources */,
 				FFACC08027F74BD500184F76 /* ChatViewController.xib in Resources */,
+				FF8E1C8E27F823C6005497E6 /* HomeTableViewCell.xib in Resources */,
 				FF0D96AE27F736890082E9A2 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,11 +392,13 @@
 				FFACC07B27F73CD800184F76 /* BaseViewController.swift in Sources */,
 				FFA13F8C27EE330C00C22147 /* NetworkManager.swift in Sources */,
 				FFACC07727F73A4500184F76 /* HomeViewModel.swift in Sources */,
+				FF8E1C8D27F823C6005497E6 /* HomeTableViewCell.swift in Sources */,
 				FFA13F8727EE31AD00C22147 /* RootCoordinator.swift in Sources */,
 				FFA13F8A27EE330400C22147 /* NetworkAPI.swift in Sources */,
 				FF0D96AD27F736890082E9A2 /* HomeViewController.swift in Sources */,
 				FF0D96A227F734330082E9A2 /* NetworkConstant.swift in Sources */,
 				FFA13F7127EE317C00C22147 /* AppDelegate.swift in Sources */,
+				FF8E1C9127F8260E005497E6 /* UIImageViewExt.swift in Sources */,
 				FFACC07F27F74BD500184F76 /* ChatViewController.swift in Sources */,
 				FFACC08427F74E3D00184F76 /* HomeVCDataSource.swift in Sources */,
 				FFA13F7327EE317C00C22147 /* SceneDelegate.swift in Sources */,

@@ -41,12 +41,13 @@ class HomeViewController: BaseViewController {
     }
     
     private func setupTableView() {
-        
         /// assigning up tableview delegate and data source
         self.tableView.delegate = self
         self.tableView.dataSource = self
         /// register tableview cell
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        self.tableView.register(
+            UINib(nibName: "HomeTableViewCell", bundle: nil),
+            forCellReuseIdentifier: HomeTableViewCell.identifier)
     }
 }
 

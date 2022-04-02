@@ -6,7 +6,6 @@
 //
 
 import Kingfisher
-import UIKit
 
 class HomeTableViewCell: UITableViewCell {
     

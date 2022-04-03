@@ -68,7 +68,7 @@ extension HomeViewController:HomeVMOutput {
     func setupViews() {
         self.setupTableView()
     }
-=
+    
     func didFinnishFetchData() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             HUD.shared.hide()

@@ -23,4 +23,5 @@ build/
 # Backup files
 *~.nib
 
+#Delete pods
 App/Pods/

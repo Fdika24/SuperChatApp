@@ -30,6 +30,9 @@
 		FFACC08027F74BD500184F76 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFACC07E27F74BD500184F76 /* ChatViewController.xib */; };
 		FFACC08227F74E1E00184F76 /* HomeVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFACC08127F74E1E00184F76 /* HomeVCDelegate.swift */; };
 		FFACC08427F74E3D00184F76 /* HomeVCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFACC08327F74E3D00184F76 /* HomeVCDataSource.swift */; };
+		FFDB983B27F98490009BC6DC /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDB983927F98490009BC6DC /* HomeTableViewCell.swift */; };
+		FFDB983C27F98490009BC6DC /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFDB983A27F98490009BC6DC /* HomeTableViewCell.xib */; };
+		FFDB983E27F98628009BC6DC /* UIImageViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDB983D27F98628009BC6DC /* UIImageViewExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,9 @@
 		FFACC07E27F74BD500184F76 /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
 		FFACC08127F74E1E00184F76 /* HomeVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCDelegate.swift; sourceTree = "<group>"; };
 		FFACC08327F74E3D00184F76 /* HomeVCDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCDataSource.swift; sourceTree = "<group>"; };
+		FFDB983927F98490009BC6DC /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		FFDB983A27F98490009BC6DC /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		FFDB983D27F98628009BC6DC /* UIImageViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +240,7 @@
 		FFACC07527F7399100184F76 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FFDB983827F98457009BC6DC /* Cell */,
 				FF0D96AB27F736890082E9A2 /* HomeViewController.swift */,
 				FF0D96AC27F736890082E9A2 /* HomeViewController.xib */,
 				FFACC08127F74E1E00184F76 /* HomeVCDelegate.swift */,
@@ -247,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				FFACC07927F73CC800184F76 /* BaseVC */,
+				FFDB983D27F98628009BC6DC /* UIImageViewExt.swift */,
 			);
 			path = Reusables;
 			sourceTree = "<group>";
@@ -266,6 +274,15 @@
 				FFACC07E27F74BD500184F76 /* ChatViewController.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FFDB983827F98457009BC6DC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FFDB983927F98490009BC6DC /* HomeTableViewCell.swift */,
+				FFDB983A27F98490009BC6DC /* HomeTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFA13F7D27EE317E00C22147 /* LaunchScreen.storyboard in Resources */,
+				FFDB983C27F98490009BC6DC /* HomeTableViewCell.xib in Resources */,
 				FFA13F7A27EE317E00C22147 /* Assets.xcassets in Resources */,
 				FF0D96A927F735050082E9A2 /* LoginViewController.xib in Resources */,
 				FFACC08027F74BD500184F76 /* ChatViewController.xib in Resources */,
@@ -396,11 +414,13 @@
 				FFA13F8727EE31AD00C22147 /* RootCoordinator.swift in Sources */,
 				FFA13F8A27EE330400C22147 /* NetworkAPI.swift in Sources */,
 				FF5BF72927F840E700F3B95B /* LoginViewModel.swift in Sources */,
+				FFDB983E27F98628009BC6DC /* UIImageViewExt.swift in Sources */,
 				FF0D96AD27F736890082E9A2 /* HomeViewController.swift in Sources */,
 				FF0D96A227F734330082E9A2 /* NetworkConstant.swift in Sources */,
 				FFA13F7127EE317C00C22147 /* AppDelegate.swift in Sources */,
 				FFACC07F27F74BD500184F76 /* ChatViewController.swift in Sources */,
 				FFACC08427F74E3D00184F76 /* HomeVCDataSource.swift in Sources */,
+				FFDB983B27F98490009BC6DC /* HomeTableViewCell.swift in Sources */,
 				FFA13F7327EE317C00C22147 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

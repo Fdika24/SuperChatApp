@@ -10,8 +10,6 @@ import FluentUI
 
 class HomeViewController: BaseViewController {
     
-    let cellIdentifier = "contentCell"
-    
     @IBOutlet weak var tableView:UITableView!
     
     var viewModel:HomeViewModel!
@@ -48,7 +46,9 @@ class HomeViewController: BaseViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         /// register tableview cell
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        self.tableView.register(
+            UINib(nibName: HomeTableViewCell.identifier, bundle: nil),
+            forCellReuseIdentifier: HomeTableViewCell.identifier)
     }
     
     @objc func logoutDidTapped() {

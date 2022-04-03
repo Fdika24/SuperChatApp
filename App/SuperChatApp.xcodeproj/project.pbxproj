@@ -13,6 +13,10 @@
 		FF0D96A927F735050082E9A2 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF0D96A727F735050082E9A2 /* LoginViewController.xib */; };
 		FF0D96AD27F736890082E9A2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0D96AB27F736890082E9A2 /* HomeViewController.swift */; };
 		FF0D96AE27F736890082E9A2 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF0D96AC27F736890082E9A2 /* HomeViewController.xib */; };
+		FF242E5627F9C1C0002202DD /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF242E5527F9C1C0002202DD /* DatabaseManager.swift */; };
+		FF3B59F827F9C39E0079BCB6 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3B59F727F9C39E0079BCB6 /* MessageModel.swift */; };
+		FF3B59FB27F9C5170079BCB6 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3B59FA27F9C5170079BCB6 /* ChatViewModel.swift */; };
+		FF3B59FD27F9C91D0079BCB6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3B59FC27F9C91D0079BCB6 /* UserModel.swift */; };
 		FF5BF72627F83FC000F3B95B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF5BF72527F83FC000F3B95B /* GoogleService-Info.plist */; };
 		FF5BF72927F840E700F3B95B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5BF72827F840E700F3B95B /* LoginViewModel.swift */; };
 		FF5BF72C27F8510500F3B95B /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5BF72B27F8510500F3B95B /* LoadingViewController.swift */; };
@@ -44,6 +48,10 @@
 		FF0D96A727F735050082E9A2 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		FF0D96AB27F736890082E9A2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FF0D96AC27F736890082E9A2 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		FF242E5527F9C1C0002202DD /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		FF3B59F727F9C39E0079BCB6 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		FF3B59FA27F9C5170079BCB6 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		FF3B59FC27F9C91D0079BCB6 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		FF5BF72527F83FC000F3B95B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FF5BF72827F840E700F3B95B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		FF5BF72B27F8510500F3B95B /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +159,23 @@
 			path = Chat;
 			sourceTree = "<group>";
 		};
+		FF3B59F627F9C3930079BCB6 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				FF3B59F727F9C39E0079BCB6 /* MessageModel.swift */,
+				FF3B59FC27F9C91D0079BCB6 /* UserModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		FF3B59F927F9C50D0079BCB6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FF3B59FA27F9C5170079BCB6 /* ChatViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FF5BF72727F840DA00F3B95B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +213,7 @@
 		FFA13F6F27EE317C00C22147 /* MainApp */ = {
 			isa = PBXGroup;
 			children = (
+				FF3B59F627F9C3930079BCB6 /* Entity */,
 				FF5BF72527F83FC000F3B95B /* GoogleService-Info.plist */,
 				FFACC07827F73CC200184F76 /* Reusables */,
 				FF0D969D27F733C50082E9A2 /* Presentation */,
@@ -225,6 +251,7 @@
 				FFA13F8D27EE332B00C22147 /* NetworkAPIWorker.swift */,
 				FFA13F8B27EE330C00C22147 /* NetworkManager.swift */,
 				FF0D96A127F734330082E9A2 /* NetworkConstant.swift */,
+				FF242E5527F9C1C0002202DD /* DatabaseManager.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -270,6 +297,7 @@
 		FFACC07C27F74BAA00184F76 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FF3B59F927F9C50D0079BCB6 /* ViewModel */,
 				FFACC07D27F74BD500184F76 /* ChatViewController.swift */,
 				FFACC07E27F74BD500184F76 /* ChatViewController.xib */,
 			);
@@ -405,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF0D96A827F735050082E9A2 /* LoginViewController.swift in Sources */,
+				FF3B59FB27F9C5170079BCB6 /* ChatViewModel.swift in Sources */,
 				FFACC08227F74E1E00184F76 /* HomeVCDelegate.swift in Sources */,
 				FFA13F8E27EE332B00C22147 /* NetworkAPIWorker.swift in Sources */,
 				FF5BF72C27F8510500F3B95B /* LoadingViewController.swift in Sources */,
@@ -413,11 +442,14 @@
 				FFACC07727F73A4500184F76 /* HomeViewModel.swift in Sources */,
 				FFA13F8727EE31AD00C22147 /* RootCoordinator.swift in Sources */,
 				FFA13F8A27EE330400C22147 /* NetworkAPI.swift in Sources */,
+				FF3B59FD27F9C91D0079BCB6 /* UserModel.swift in Sources */,
 				FF5BF72927F840E700F3B95B /* LoginViewModel.swift in Sources */,
 				FFDB983E27F98628009BC6DC /* UIImageViewExt.swift in Sources */,
 				FF0D96AD27F736890082E9A2 /* HomeViewController.swift in Sources */,
 				FF0D96A227F734330082E9A2 /* NetworkConstant.swift in Sources */,
 				FFA13F7127EE317C00C22147 /* AppDelegate.swift in Sources */,
+				FF242E5627F9C1C0002202DD /* DatabaseManager.swift in Sources */,
+				FF3B59F827F9C39E0079BCB6 /* MessageModel.swift in Sources */,
 				FFACC07F27F74BD500184F76 /* ChatViewController.swift in Sources */,
 				FFACC08427F74E3D00184F76 /* HomeVCDataSource.swift in Sources */,
 				FFDB983B27F98490009BC6DC /* HomeTableViewCell.swift in Sources */,

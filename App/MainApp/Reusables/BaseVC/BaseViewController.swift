@@ -10,6 +10,14 @@ import FluentUI
 
 class BaseViewController:UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if !(self is LoginViewController) && !NetworkConstant.isLogin() {
+            navigateToAuthView()
+        }
+    }
+    
     lazy var notificationView:NotificationView = {
         let notif = NotificationView()
         notif.translatesAutoresizingMaskIntoConstraints = false

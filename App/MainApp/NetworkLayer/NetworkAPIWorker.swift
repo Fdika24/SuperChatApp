@@ -32,6 +32,8 @@ extension NetworkAPI {
             case .getSomething :
                 print("something")
             }
+        case .login(type: let type):
+            print("nothing")
         }
         return req
     }
@@ -47,6 +49,8 @@ extension NetworkAPI {
             switch getPath {
             case .getSomething : return []
             }
+        case .login(type: let type):
+            return []
         }
     }
     
@@ -62,6 +66,8 @@ extension NetworkAPI {
             case .getSomething :
                 return ""
             }
+        case .login(type: let type):
+            return ""
         }
     }
     

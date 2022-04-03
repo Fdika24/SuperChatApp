@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RootCoordinator {
     var window:UIWindow?
@@ -18,13 +19,33 @@ class RootCoordinator {
     }
     
     public func start() {
-        self.initialNavigation()
+        self.checkLastState()
         window?.makeKeyAndVisible()
     }
     
-    private func initialNavigation() {
-        /// change if needed, this will be your initial view controller
+    public func configureApp() {
+        if FirebaseApp.app() == nil {
+            FirebaseApp.configure()
+        }
+    }
+    
+    //TODO: REWORK
+    private func checkLastState() {
+        if NetworkConstant.isLogin() {
+            navigateToHome()
+        } else {
+            navigateToAuth()
+        }
+    }
+    
+    private func navigateToAuth() {
         let vc = LoginViewController(nibName: "LoginViewController", bundle: nil)
         navigationController.pushViewController(vc, animated: true)
     }
+    
+    private func navigateToHome() {
+        let vc = HomeViewController(nibName: "HomeViewController", bundle: nil)
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
 }

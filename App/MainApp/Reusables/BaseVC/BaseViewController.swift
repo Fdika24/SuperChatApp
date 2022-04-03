@@ -53,4 +53,8 @@ class BaseViewController:UIViewController {
         self.navigationController?.isNavigationBarHidden = false
     }
     
+    func navigateToAuthView() {
+        let vc = LoginViewController(nibName: "LoginViewController", bundle: nil)
+        self.navigationController?.setViewControllers([vc], animated: true)
+    }
 }

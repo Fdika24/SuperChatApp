@@ -6,14 +6,77 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 class NetworkManager {
     
-    static func requestLogin(
+    func requestlogout(
         completion: @escaping (Result<String, Error>) -> ()
     ) {
-        completion(.success("success"))
+        do {
+            try Auth.auth().signOut()
+            completion(.success("success"))
+        } catch (let error) {
+            completion(.failure(error))
+        }
     }
+    
+    func requestSignUp(
+        target:NetworkAPI.loginType,
+        username:String,
+        completion: @escaping (Result<String, Error>) -> ()
+    ){
+        switch target {
+        case .email(let email, let password):
+            self.signupByEmail(
+                email: email, password: password, username: username,
+                completion: completion)
+        }
+    }
+    
+    private func signupByEmail(
+        email:String,password:String,username:String,
+        completion: @escaping (Result<String, Error>) -> ()
+    ) {
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            if error != nil {
+                completion(.failure(error!))
+            } else {
+                let res = authResult?.user.createProfileChangeRequest()
+                res?.displayName = username
+                completion(.success("success"))
+            }
+        }
+    }
+    
+    func requestLogin(
+        target:NetworkAPI.loginType,
+        completion: @escaping (Result<String, Error>) -> ()
+    ) {
+        switch target {
+        case .email(let email,let password):
+            self.loginByEmail(
+                email: email, password: password,
+                completion: completion)
+        }
+    }
+    
+    private func loginByEmail(
+        email:String,
+        password:String,
+        completion: @escaping (Result<String, Error>) -> ()
+    ) {
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            if error != nil {
+                completion(.failure(error!))
+            } else {
+                //TODO: Add something to the closure
+                completion(.success("success"))
+            }
+            
+        }
+    }
+    
     
     func request<T: Decodable>(
         target: NetworkAPI,

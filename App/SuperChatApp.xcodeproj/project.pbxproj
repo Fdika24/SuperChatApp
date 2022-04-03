@@ -13,6 +13,9 @@
 		FF0D96A927F735050082E9A2 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF0D96A727F735050082E9A2 /* LoginViewController.xib */; };
 		FF0D96AD27F736890082E9A2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0D96AB27F736890082E9A2 /* HomeViewController.swift */; };
 		FF0D96AE27F736890082E9A2 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF0D96AC27F736890082E9A2 /* HomeViewController.xib */; };
+		FF5BF72627F83FC000F3B95B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF5BF72527F83FC000F3B95B /* GoogleService-Info.plist */; };
+		FF5BF72927F840E700F3B95B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5BF72827F840E700F3B95B /* LoginViewModel.swift */; };
+		FF5BF72C27F8510500F3B95B /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5BF72B27F8510500F3B95B /* LoadingViewController.swift */; };
 		FFA13F7127EE317C00C22147 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA13F7027EE317C00C22147 /* AppDelegate.swift */; };
 		FFA13F7327EE317C00C22147 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA13F7227EE317C00C22147 /* SceneDelegate.swift */; };
 		FFA13F7A27EE317E00C22147 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFA13F7927EE317E00C22147 /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 		FF0D96A727F735050082E9A2 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		FF0D96AB27F736890082E9A2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FF0D96AC27F736890082E9A2 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		FF5BF72527F83FC000F3B95B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FF5BF72827F840E700F3B95B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		FF5BF72B27F8510500F3B95B /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		FFA13F6D27EE317C00C22147 /* SuperChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA13F7027EE317C00C22147 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFA13F7227EE317C00C22147 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +94,7 @@
 		FF0D969D27F733C50082E9A2 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				FF5BF72A27F850F600F3B95B /* Loading */,
 				FF0D969F27F734090082E9A2 /* TapBar */,
 				FF0D969E27F734040082E9A2 /* Auth */,
 			);
@@ -114,6 +121,7 @@
 		FF0D96A327F734E80082E9A2 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				FF5BF72727F840DA00F3B95B /* ViewModel */,
 				FF0D96A627F735050082E9A2 /* LoginViewController.swift */,
 				FF0D96A727F735050082E9A2 /* LoginViewController.xib */,
 			);
@@ -137,6 +145,22 @@
 			path = Chat;
 			sourceTree = "<group>";
 		};
+		FF5BF72727F840DA00F3B95B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FF5BF72827F840E700F3B95B /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FF5BF72A27F850F600F3B95B /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				FF5BF72B27F8510500F3B95B /* LoadingViewController.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
 		FFA13F6427EE317C00C22147 = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +182,7 @@
 		FFA13F6F27EE317C00C22147 /* MainApp */ = {
 			isa = PBXGroup;
 			children = (
+				FF5BF72527F83FC000F3B95B /* GoogleService-Info.plist */,
 				FFACC07827F73CC200184F76 /* Reusables */,
 				FF0D969D27F733C50082E9A2 /* Presentation */,
 				FFA13F8827EE32F600C22147 /* NetworkLayer */,
@@ -308,6 +333,7 @@
 				FF0D96A927F735050082E9A2 /* LoginViewController.xib in Resources */,
 				FFACC08027F74BD500184F76 /* ChatViewController.xib in Resources */,
 				FF0D96AE27F736890082E9A2 /* HomeViewController.xib in Resources */,
+				FF5BF72627F83FC000F3B95B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,11 +389,13 @@
 				FF0D96A827F735050082E9A2 /* LoginViewController.swift in Sources */,
 				FFACC08227F74E1E00184F76 /* HomeVCDelegate.swift in Sources */,
 				FFA13F8E27EE332B00C22147 /* NetworkAPIWorker.swift in Sources */,
+				FF5BF72C27F8510500F3B95B /* LoadingViewController.swift in Sources */,
 				FFACC07B27F73CD800184F76 /* BaseViewController.swift in Sources */,
 				FFA13F8C27EE330C00C22147 /* NetworkManager.swift in Sources */,
 				FFACC07727F73A4500184F76 /* HomeViewModel.swift in Sources */,
 				FFA13F8727EE31AD00C22147 /* RootCoordinator.swift in Sources */,
 				FFA13F8A27EE330400C22147 /* NetworkAPI.swift in Sources */,
+				FF5BF72927F840E700F3B95B /* LoginViewModel.swift in Sources */,
 				FF0D96AD27F736890082E9A2 /* HomeViewController.swift in Sources */,
 				FF0D96A227F734330082E9A2 /* NetworkConstant.swift in Sources */,
 				FFA13F7127EE317C00C22147 /* AppDelegate.swift in Sources */,

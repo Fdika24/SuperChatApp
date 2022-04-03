@@ -12,5 +12,9 @@ target 'SuperChatApp' do
   
   # Install King fisher to load image from url
   pod 'Kingfisher', '~> 7.0'
+  
+  # Add Firebase
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
 end

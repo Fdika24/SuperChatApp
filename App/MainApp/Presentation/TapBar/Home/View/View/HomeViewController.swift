@@ -12,6 +12,8 @@ class HomeViewController: BaseViewController {
     
     @IBOutlet weak var tableView:UITableView!
     
+    let searchController = UISearchController()
+    
     var viewModel:HomeViewModel!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -33,7 +35,6 @@ class HomeViewController: BaseViewController {
         self.navigationController?.isNavigationBarHidden = false
         self.navigationItem.hidesBackButton = true
         self.title = "Home"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutDidTapped))
     }
 
     override func viewDidLoad() {
@@ -67,6 +68,8 @@ extension HomeViewController:HomeVMOutput {
     
     func setupViews() {
         self.setupTableView()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutDidTapped))
+        navigationItem.searchController = searchController
     }
     
     func didFinnishFetchData() {

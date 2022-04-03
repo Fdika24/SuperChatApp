@@ -29,7 +29,6 @@ class RootCoordinator {
         }
     }
     
-    //TODO: REWORK
     private func checkLastState() {
         if NetworkConstant.isLogin() {
             navigateToHome()

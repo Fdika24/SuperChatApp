@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0FD0970DBA3A7EA6CA305684 /* Pods_SuperChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6508487DBA532AA8AC41249 /* Pods_SuperChatApp.framework */; };
+		AEFEA99A28031D88003A87E8 /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFEA99928031D88003A87E8 /* UIColorExt.swift */; };
+		AEFEA99D28035634003A87E8 /* UITapExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFEA99C28035634003A87E8 /* UITapExt.swift */; };
+		AEFEA9A128035A65003A87E8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFEA9A028035A64003A87E8 /* RegisterViewController.swift */; };
 		FF0D96A227F734330082E9A2 /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0D96A127F734330082E9A2 /* NetworkConstant.swift */; };
 		FF0D96A827F735050082E9A2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0D96A627F735050082E9A2 /* LoginViewController.swift */; };
 		FF0D96A927F735050082E9A2 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF0D96A727F735050082E9A2 /* LoginViewController.xib */; };
@@ -36,6 +39,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AEFEA99928031D88003A87E8 /* UIColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExt.swift; sourceTree = "<group>"; };
+		AEFEA99C28035634003A87E8 /* UITapExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITapExt.swift; sourceTree = "<group>"; };
+		AEFEA9A028035A64003A87E8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		B57CF5ABE372ABC90E9AECDE /* Pods-SuperChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperChatApp.release.xcconfig"; path = "Target Support Files/Pods-SuperChatApp/Pods-SuperChatApp.release.xcconfig"; sourceTree = "<group>"; };
 		F6508487DBA532AA8AC41249 /* Pods_SuperChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEF5497ED36A576AA0DD8D77 /* Pods-SuperChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperChatApp.debug.xcconfig"; path = "Target Support Files/Pods-SuperChatApp/Pods-SuperChatApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +103,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AEFEA99828031D72003A87E8 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				AEFEA99928031D88003A87E8 /* UIColorExt.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		AEFEA99B2803561C003A87E8 /* UITapGesture */ = {
+			isa = PBXGroup;
+			children = (
+				AEFEA99C28035634003A87E8 /* UITapExt.swift */,
+			);
+			path = UITapGesture;
+			sourceTree = "<group>";
+		};
+		AEFEA99E28035A49003A87E8 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				AEFEA99F28035A50003A87E8 /* ViewModel */,
+				AEFEA9A028035A64003A87E8 /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		AEFEA99F28035A50003A87E8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FF0D969D27F733C50082E9A2 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +148,7 @@
 		FF0D969E27F734040082E9A2 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				AEFEA99E28035A49003A87E8 /* Register */,
 				FF0D96A327F734E80082E9A2 /* Login */,
 			);
 			path = Auth;
@@ -253,6 +292,8 @@
 		FFACC07827F73CC200184F76 /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
+				AEFEA99B2803561C003A87E8 /* UITapGesture */,
+				AEFEA99828031D72003A87E8 /* Colors */,
 				FFACC07927F73CC800184F76 /* BaseVC */,
 				FFDB983D27F98628009BC6DC /* UIImageViewExt.swift */,
 			);
@@ -409,8 +450,11 @@
 				FFA13F8E27EE332B00C22147 /* NetworkAPIWorker.swift in Sources */,
 				FF5BF72C27F8510500F3B95B /* LoadingViewController.swift in Sources */,
 				FFACC07B27F73CD800184F76 /* BaseViewController.swift in Sources */,
+				AEFEA99D28035634003A87E8 /* UITapExt.swift in Sources */,
 				FFA13F8C27EE330C00C22147 /* NetworkManager.swift in Sources */,
 				FFACC07727F73A4500184F76 /* HomeViewModel.swift in Sources */,
+				AEFEA99A28031D88003A87E8 /* UIColorExt.swift in Sources */,
+				AEFEA9A128035A65003A87E8 /* RegisterViewController.swift in Sources */,
 				FFA13F8727EE31AD00C22147 /* RootCoordinator.swift in Sources */,
 				FFA13F8A27EE330400C22147 /* NetworkAPI.swift in Sources */,
 				FF5BF72927F840E700F3B95B /* LoginViewModel.swift in Sources */,

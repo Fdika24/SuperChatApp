@@ -11,6 +11,7 @@ import FirebaseAuth
 protocol LoginVMOutput {
     func didSuccessAuth()
     func didFailAuth(error:Error)
+    func gotoSignUp()
 }
 
 class LoginViewModel {
@@ -46,5 +47,9 @@ class LoginViewModel {
     
     private func tryToAuth() {
     
+    }
+    
+    func tryToSignUp() {
+        self.output.gotoSignUp()
     }
 }

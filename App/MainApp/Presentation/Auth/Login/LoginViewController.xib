@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,8 +10,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="SuperChatApp" customModuleProvider="target">
             <connections>
-                <outlet property="emailTextField" destination="lMI-hT-lxT" id="RhH-Vv-R3E"/>
-                <outlet property="passwordTextField" destination="d93-QV-1XW" id="Zwc-NZ-jKR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,51 +25,9 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lMI-hT-lxT">
-                    <rect key="frame" x="58" y="242" width="298" height="34"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="298" id="g8j-M2-vO3"/>
-                        <constraint firstAttribute="height" constant="34" id="yIK-GY-52Z"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d93-QV-1XW">
-                    <rect key="frame" x="58" y="284" width="298" height="34"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="34" id="G7T-uV-N4l"/>
-                        <constraint firstAttribute="width" constant="298" id="snv-bD-LsX"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5g-aZ-lo6">
-                    <rect key="frame" x="58" y="432.5" width="298" height="31"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="31" id="MIc-64-tDw"/>
-                        <constraint firstAttribute="width" constant="298" id="clO-eT-NYp"/>
-                    </constraints>
-                    <buttonConfiguration key="configuration" style="tinted" title="login"/>
-                    <connections>
-                        <action selector="didTapLogin:" destination="-1" eventType="touchUpInside" id="Vdf-cP-Z1q"/>
-                    </connections>
-                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <constraints>
-                <constraint firstItem="F5g-aZ-lo6" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="3QO-JK-ZsL"/>
-                <constraint firstItem="d93-QV-1XW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="58" id="3ba-V9-97b"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="d93-QV-1XW" secondAttribute="trailing" constant="58" id="4fl-Nr-pgx"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lMI-hT-lxT" secondAttribute="trailing" constant="58" id="5lf-bj-NLX"/>
-                <constraint firstItem="lMI-hT-lxT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="897-oX-5Xc"/>
-                <constraint firstItem="lMI-hT-lxT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="198" id="Zyk-Og-n9a"/>
-                <constraint firstItem="d93-QV-1XW" firstAttribute="top" secondItem="lMI-hT-lxT" secondAttribute="bottom" constant="8" id="eiI-p7-Mdd"/>
-                <constraint firstItem="lMI-hT-lxT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="58" id="flr-ew-Grf"/>
-                <constraint firstItem="d93-QV-1XW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hY4-0z-7JI"/>
-                <constraint firstItem="F5g-aZ-lo6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mu5-g4-KpE"/>
-                <constraint firstItem="lMI-hT-lxT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="taN-WV-huk"/>
-            </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="98.4375"/>
         </view>
     </objects>

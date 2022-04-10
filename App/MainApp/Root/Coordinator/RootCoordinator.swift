@@ -30,11 +30,12 @@ class RootCoordinator {
     }
     
     private func checkLastState() {
-        if NetworkConstant.isLogin() {
-            navigateToHome()
-        } else {
-            navigateToAuth()
-        }
+        navigateToAuth()
+//        if NetworkConstant.isLogin() {
+//            navigateToHome()
+//        } else {
+//            navigateToAuth()
+//        }
     }
     
     private func navigateToAuth() {

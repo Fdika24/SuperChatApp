@@ -148,7 +148,6 @@ class LoginViewController: BaseViewController {
             emailTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -51),
             emailTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             emailTextField.widthAnchor.constraint(greaterThanOrEqualToConstant: 274),
-            
             emailTextField.heightAnchor.constraint(equalToConstant: 49),
             
             passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor,constant: 19),
